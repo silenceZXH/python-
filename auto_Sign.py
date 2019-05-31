@@ -13,7 +13,7 @@ email_3 = '1120124312@qq.com'
 email_4 = '734738141@qq.com'
 email_5 = 'amareeee@163.com'
 passwd_1 = 'amarevpn'
-user_email = ['norealdeath@163.com','1789342527@qq.com','1120124312@qq.com','734738141@qq.com','amareeee@163.com']
+user_email = [email_1,email_2,email_3,email_4,email_5]
 
 driver = webdriver.Chrome() 
 driver.implicitly_wait(8)   #打开窗口
@@ -38,7 +38,7 @@ for i in range(len(user_email)):
         print("续命成功")
     except:
         print("签到失败") 
-    sleep(3)
+    sleep(3) 
     driver.find_element_by_xpath("/html/body/div[1]/div[1]/ul[2]/li/a/span").click()
     driver.find_element_by_link_text("退出网站").click()
     sleep(3)
